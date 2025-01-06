@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Demstruf Construction</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-about {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('/api/placeholder/1920/1080') center/cover no-repeat;
+            height: 60vh;
+        }
+        .values-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu {
+            display: none;
+        }
+        .mobile-menu.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-blue-900">DEMSTRUF</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-800 hover:text-blue-600">Home</a>
+                    <a href="#vision" class="text-gray-800 hover:text-blue-600">Vision</a>
+                    <a href="#ethics" class="text-gray-800 hover:text-blue-600">Ethics</a>
+                    <a href="#staff" class="text-gray-800 hover:text-blue-600">Staff</a>
+                    <a href="index.html#contact" class="text-gray-800 hover:text-blue-600">Contact</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-gray-800">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu bg-white py-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-gray-800 hover:text-blue-600 px-4">Home</a>
+                    <a href="#vision" class="text-gray-800 hover:text-blue-600 px-4">Vision</a>
+                    <a href="#ethics" class="text-gray-800 hover:text-blue-600 px-4">Ethics</a>
+                    <a href="#staff" class="text-gray-800 hover:text-blue-600 px-4">Staff</a>
+                    <a href="index.html#contact" class="text-gray-800 hover:text-blue-600 px-4">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-about flex items-center">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">About Us</h1>
+            <p class="text-xl max-w-3xl mx-auto">Building Excellence Through Values, Vision, and Dedication</p>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section id="vision" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-blue-50 p-8 rounded-lg shadow-lg">
+                    <h2 class="text-3xl font-bold mb-6 text-blue-900">Our Vision</h2>
+                    <p class="text-gray-700 text-lg">To be a respectable building contractor delivering excellently beyond expectation, always.</p>
+                </div>
+                <div class="bg-blue-50 p-8 rounded-lg shadow-lg">
+                    <h2 class="text-3xl font-bold mb-6 text-blue-900">Our Mission</h2>
+                    <p class="text-gray-700 text-lg">To procure project at competitive pricing, provide safe working condition, deliver quality work within reasonable time frame.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ethics Section -->
+    <section id="ethics" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Ethics & Values</h2>
+            <div class="max-w-4xl mx-auto">
+                <p class="text-gray-700 mb-8">
+                    We at DEMSTRUF remain true to our founding values of providing excellence, quality, honesty, hard work and dedication, instilled right from the outset by our founder, Adisa Francis Omodara.
+                </p>
+                <p class="text-gray-700">
+                    We endeavour to adhere to the highest ethical standards in the industry. We have been accepted by the construction industry as a trustworthy business by being consistently associated with integrity, high standards and quality of service and personal attention to clients.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Section -->
+    <section id="staff" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Our Team</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-blue-900">Staff Development</h3>
+                    <p class="text-gray-700 mb-6">
+                        We recognize that our major asset is our people, and that a truly successful company needs to be a rewarding work environment for its staff. Our organization is structured and managed to provide many opportunities and encouragement for our team to reach their optimum potential.
+                    </p>
+                    <p class="text-gray-700">
+                        We believe that mutual respect forms the base of our success.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-blue-900">Our Philosophy</h3>
+                    <p class="text-gray-700 mb-6">
+                        Lasting relationships are the lifeblood of business in our industry. At all times, we strive for solutions that best achieve our client's needs and goals. Our staff's ability and commitment to finding these solutions is what distinguishes us.
+                    </p>
+                    <p class="text-gray-700">
+                        We provide consistent personal and individual attention to all our clients.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Demstruf Construction. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
