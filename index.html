@@ -24,11 +24,12 @@
     </style>
 </head>
 <body>
+   
     <!-- Navbar -->
     <nav class="fixed w-full z-50 bg-white shadow-lg">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
-                <div class="text-2xl font-bold text-blue-900">   <img src="demstruf_logo.jpg" alt="DEMSTRUF Logo" class="h-12"></div>
+                <div class="text-2xl font-bold text-blue-900">DEMSTRUF</div>
                 <div class="hidden md:flex space-x-8">
                     <a href="#home" class="text-gray-800 hover:text-blue-600">Home</a>
                     <a href="#welcome" class="text-gray-800 hover:text-blue-600">Welcome</a>
@@ -36,13 +37,22 @@
                     <a href="#services" class="text-gray-800 hover:text-blue-600">Services</a>
                     <a href="#contact" class="text-gray-800 hover:text-blue-600">Contact</a>
                 </div>
-                <button class="md:hidden text-gray-800">
+                <button id="mobile-menu-button" class="md:hidden text-gray-800">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu bg-white py-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="text-gray-800 hover:text-blue-600 px-4">Home</a>
+                    <a href="#welcome" class="text-gray-800 hover:text-blue-600 px-4">Welcome</a>
+                    <a href="#about" class="text-gray-800 hover:text-blue-600 px-4">About</a>
+                    <a href="#services" class="text-gray-800 hover:text-blue-600 px-4">Services</a>
+                    <a href="#contact" class="text-gray-800 hover:text-blue-600 px-4">Contact</a>
+                </div>
+            </div>
         </div>
     </nav>
-
     <!-- Hero Section -->
     <section id="home" class="hero-section h-screen flex items-center">
         <div class="container mx-auto px-4 text-center text-white">
@@ -173,7 +183,21 @@
             <p>&copy; 2025 Demstruf Construction. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
 </body>
 </html>
